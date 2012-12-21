@@ -6,7 +6,7 @@
  *
  *
 */
-getTemplateName('index');
+setTemplateName('index');
 ?>
 <!DOCTYPE html>
 <!--[if IE 6]>
