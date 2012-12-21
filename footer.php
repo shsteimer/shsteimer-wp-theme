@@ -10,8 +10,9 @@
 <div id="footer" class="row well well-small">
 	<div class="span10">
         <div class="fb-like" data-href="<?php echo home_url( '/' ); ?>" data-send="false" 
-                                data-width="300" data-show-faces="false" data-colorscheme="light"></div>
-		<a href="https://twitter.com/shsteimer" class="twitter-follow-button" data-show-count="false">Follow @shsteimer</a>
+            data-width="300" data-show-faces="false" data-colorscheme="light"></div>
+            <div class="g-plusone" data-size="medium" data-annotation="inline" data-width="250" data-href="<?php echo home_url( '/' ); ?>"></div>
+		<a href="https://twitter.com/shsteimer" class="twitter-follow-button" data-show-count="false">Follow me @shsteimer</a>
 	</div>
 	<div class="span2">
 		<span id="copyright" class="muted">Copyright &copy; 2012 Sean H. Steimer</span>

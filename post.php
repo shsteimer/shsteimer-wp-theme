@@ -19,7 +19,8 @@
 				<a href="https://twitter.com/share" class="twitter-share-button" data-text="<?php the_title(); ?>" data-url="<?php the_permalink(); ?>" data-via="shsteimer">Tweet</a>
 			</li>
 			<li class="gplus">
-				<div class="g-plusone" data-size="medium" data-href="<?php the_permalink(); ?>"></div>
+				<!-- Place this tag where you want the share button to render. -->
+				<div class="g-plus" data-action="share" data-annotation="bubble" data-href="<?php the_permalink(); ?>"></div>
 			</li>
 		</ul>
 	</div>
