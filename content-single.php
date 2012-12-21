@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <div class="row-fluid">
     <div class="span9">
-      <?php 
+      <?php get_template_part( 'breadcrumb', 'single' );
 			the_post(); 
 			$archiveYear = get_the_time('Y');
 			$archiveMonth = get_the_time('m');
