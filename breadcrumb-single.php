@@ -1,5 +1,4 @@
 <?php 
-	the_post(); 
 	$archiveYear = get_the_time('Y');
 	$archiveMonth = get_the_time('m');
 	$archiveDay = get_the_time('d');
