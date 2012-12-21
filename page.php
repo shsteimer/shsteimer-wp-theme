@@ -6,19 +6,21 @@
  *
  *
 */
+setTemplateName('page');
 ?>
-<?php get_header(); ?>
-<div class="container-fluid">
-  <div class="row-fluid">
-    <div class="span7">
-    	<?php 
-			the_post(); 
-			?>
-		<h1><?php the_title(); ?></h1>
-		<span class="post-info muted">Posted by <?php echo get_the_author(); ?> on <?php the_date('m.d.Y'); ?></span>
-		<div class="post-body"><?php the_content(); ?></div>
-	</div>
-    <?php get_sidebar(); ?>
-  </div>
-</div>  
-<?php get_footer(); ?>
+<!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6" <?php language_attributes(); ?> xmlns:fb="http://ogp.me/ns/fb#">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7" <?php language_attributes(); ?> xmlns:fb="http://ogp.me/ns/fb#">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8" <?php language_attributes(); ?> xmlns:fb="http://ogp.me/ns/fb#">
+<![endif]-->
+<!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
+<html <?php language_attributes(); ?> xmlns:fb="http://ogp.me/ns/fb#">
+<!--<![endif]-->
+<?php get_template_part( 'head', getTemplateName() ); ?>
+<?php get_template_part( 'body', getTemplateName() ); ?>
+</html>
