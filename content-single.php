@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <div class="row-fluid">
     <div class="span9">
-      <?php get_template_part( 'breadcrumb', 'single' );
+      <?php get_template_part( 'breadcrumb', getTemplatePart() );
 			the_post(); 
 			$archiveYear = get_the_time('Y');
 			$archiveMonth = get_the_time('m');
@@ -14,7 +14,7 @@
 				<li><a href="<?php echo get_day_link( $archiveYear, $archiveMonth, $archiveDay ); ?>"><?php echo $archiveDay; ?></a> <span class="divider">/</span></li>
 				<li class="active"><?php the_title(); ?></li>
 			</ul>
-			<?php get_template_part( 'post', 'single' ); ?>
+			<?php get_template_part( 'post', getTemplatePart() ); ?>
 			<ul class="pager">
   				<?php
 					$prev_post = get_next_post();

@@ -33,4 +33,18 @@ function pagination() {
 	}
 }
 
+
+
+$theTemplatePart='index';
+function setTemplatePart($partName) {
+	global $theTemplatePart;
+	$theTemplatePart=$partName;
+}
+
+function getTemplatePart() {
+	global $theTemplatePart;
+	return $theTemplatePart;
+}
+
+
 ?>

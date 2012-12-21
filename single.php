@@ -6,6 +6,8 @@
  *
  *
 */
+
+setTemplatePart('single');
 ?>
 <!DOCTYPE html>
 <!--[if IE 6]>
@@ -20,6 +22,6 @@
 <!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
 <html <?php language_attributes(); ?> xmlns:fb="http://ogp.me/ns/fb#">
 <!--<![endif]-->
-<?php get_template_part( 'head', 'single' ); ?>
-<?php get_template_part( 'body', 'single' ); ?>
+<?php get_template_part( 'head', getTemplatePart() ); ?>
+<?php get_template_part( 'body', getTemplatePart() ); ?>
 </html>
