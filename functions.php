@@ -35,15 +35,15 @@ function pagination() {
 
 
 
-$theTemplatePart='index';
-function setTemplatePart($partName) {
-	global $theTemplatePart;
-	$theTemplatePart=$partName;
+$theTemplateName='index';
+function setTemplateName($name) {
+	global $theTemplateName;
+	$theTemplateName=$name;
 }
 
-function getTemplatePart() {
-	global $theTemplatePart;
-	return $theTemplatePart;
+function getTemplateName() {
+	global $theTemplateName;
+	return $theTemplateName;
 }
 
 

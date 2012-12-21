@@ -5,7 +5,7 @@
 	if ( have_posts() ) {
 		while (have_posts()) {
 			the_post(); ?>
-			<?php get_template_part( 'post', getTemplatePart() ); ?>
+			<?php get_template_part( 'post', getTemplateName() ); ?>
 		<?php
 		}//end posts loop
 		pagination();

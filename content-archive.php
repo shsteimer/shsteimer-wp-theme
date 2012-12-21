@@ -1,11 +1,11 @@
 <div class="container-fluid">
   <div class="row-fluid">
     <div class="span7">
-    	<?php get_template_part( 'breadcrumb', getTemplatePart() ); 
+    	<?php get_template_part( 'breadcrumb', getTemplateName() ); 
 		if ( have_posts() ) {
 			while (have_posts()) {
 				the_post();
-				get_template_part( 'post', getTemplatePart() );
+				get_template_part( 'post', getTemplateName() );
 			}
 			pagination();
 		} 
