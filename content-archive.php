@@ -1,6 +1,6 @@
 <div class="container-fluid">
   <div class="row-fluid">
-    <div class="span7">
+    <div class="span7" id="main-content">
     	<?php get_template_part( 'breadcrumb', getTemplateName() ); 
 		if ( have_posts() ) {
 			while (have_posts()) {

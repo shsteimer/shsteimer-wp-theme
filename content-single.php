@@ -1,6 +1,6 @@
 <div class="container-fluid">
   <div class="row-fluid">
-    <div class="span9">
+    <div class="span9" id="main-content">
       <?php 
 			the_post(); 
 			get_template_part( 'breadcrumb', getTemplateName() );
