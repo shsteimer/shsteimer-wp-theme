@@ -1,18 +1,33 @@
 .post {
 	background-color: @grayDark;
 	color: #ddd;
+
+	h1 {
+		color: #08C;
+	}
+
 	h2  {
 		margin-bottom: 2px;
 	}
+
 	.post-info {
 		font-size: 10px;
 	}
+
 	a.post-title {	
-		:active {
+		&:active {
 			text-decoration: none;
+			color: #005580;
+			h1 {
+				color: inherit;
+			}
 		}
-		:hover {
+		&:hover {
 			text-decoration: none;
+			color: #005580;
+			h1 {
+				color: inherit;
+			}
 		}
 	}
 	

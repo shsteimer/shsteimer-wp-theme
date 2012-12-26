@@ -5124,17 +5124,28 @@ a.badge:hover {
   background-color: #333333;
   color: #ddd;
 }
+.post h1 {
+  color: #08C;
+}
 .post h2 {
   margin-bottom: 2px;
 }
 .post .post-info {
   font-size: 10px;
 }
-.post a.post-title :active {
+.post a.post-title:active {
   text-decoration: none;
+  color: #005580;
 }
-.post a.post-title :hover {
+.post a.post-title:active h1 {
+  color: inherit;
+}
+.post a.post-title:hover {
   text-decoration: none;
+  color: #005580;
+}
+.post a.post-title:hover h1 {
+  color: inherit;
 }
 .post .post-social {
   margin-top: 5px;
