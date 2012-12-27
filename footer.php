@@ -25,7 +25,8 @@
 
     /* * * DON'T EDIT BELOW THIS LINE * * */
     (function () {
-        var s = document.createElement('script'); s.async = true;
+        var s = document.createElement('script'); 
+        s.async = true;
         s.type = 'text/javascript';
         s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
         (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
@@ -33,9 +34,12 @@
 
     // google +1 button js
     (function() {
-    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-    po.src = 'https://apis.google.com/js/plusone.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+        var po = document.createElement('script'); 
+        po.type = 'text/javascript'; 
+        po.async = true;
+        po.src = 'https://apis.google.com/js/plusone.js';
+        var s = document.getElementsByTagName('script')[0]; 
+        s.parentNode.insertBefore(po, s);
     })();
 </script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>

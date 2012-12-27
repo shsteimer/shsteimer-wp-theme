@@ -51,5 +51,37 @@ function getTemplateName() {
 	return $theTemplateName;
 }
 
+//get the options for the ga plugin i'm using, this is to avoid hardcoding, the $GA_ACCOUNT variable.
+$GA_OPTIONS = get_option( 'Yoast_Google_Analytics' );
+
+//  Copyright 2009 Google Inc. All Rights Reserved.
+$GA_ACCOUNT = $GA_OPTIONS['uastring'];
+$GA_PIXEL = "ga.php";
+
+function googleAnalyticsGetImageUrl() {
+    global $GA_ACCOUNT, $GA_PIXEL;
+    $url = "";
+    $url .= $GA_PIXEL . "?";
+    $url .= "utmac=" . $GA_ACCOUNT;
+    $url .= "&utmn=" . rand(0, 0x7fffffff);
+
+    $referer = $_SERVER["HTTP_REFERER"];
+    $query = $_SERVER["QUERY_STRING"];
+    $path = $_SERVER["REQUEST_URI"];
+
+    if (empty($referer)) {
+      $referer = "-";
+    }
+    $url .= "&utmr=" . urlencode($referer);
+
+    if (!empty($path)) {
+      $url .= "&utmp=" . urlencode($path);
+    }
+
+    $url .= "&guid=ON";
+
+    return $url;
+}
+
 
 ?>

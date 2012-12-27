@@ -25,7 +25,17 @@ var shsteimer = shsteimer || {
 		tabletwWidth: 979,
 
 		init: function() {
+			//pretty print any code snippets on the page
 			prettyPrint();
+
+			//analytics track any clicks on post-title to view the full post
+			$('a.post-title').click(function(evt){
+				shsteimer.blog.trackAnalyticsEvent('View Post','Click Title',{
+					label: $(this).attr('title')
+				});
+			});
+			
+			//initialize the 'originalContentSpanClass' and 'currentContentSpanClass' needed for responsive resizing js code
 			var contentDiv = $('#main-content');
 			var classes = contentDiv.attr('class').split(/\s+/);
 			
@@ -36,6 +46,7 @@ var shsteimer = shsteimer || {
 	    		}
 			},this));
 			
+			//bind the resize handler to the window resize event
 			$(window).resize($.proxy(this.resizeHandler,this));
 		},
 
@@ -51,6 +62,17 @@ var shsteimer = shsteimer || {
 				$('#main-content').removeClass(this.currentContentSpanClass);
 				$('#main-content').addClass(this.originalContentSpanClass);
 				this.currentContentSpanClass=this.originalContentSpanClass;
+			}
+		},
+
+		trackAnalyticsEvent: function(category,action,opts) {
+			if(typeof _gaq !== 'undefined') {
+				_gaq._trackEvent(
+					category,
+					action,
+					opts.label ? opts.label : undefined,
+					opts.value ? opts.value : undefined,
+					opts.noninteraction ? opts.noninteraction : false);
 			}
 		}
 	}
