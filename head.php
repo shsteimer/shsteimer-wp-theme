@@ -23,7 +23,7 @@
 
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
-    <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/styles.min.css" />
     <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/responsive-styles.min.css" />
     <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/prettify/prettify.css" />
     
