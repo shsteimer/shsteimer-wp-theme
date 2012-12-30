@@ -5165,6 +5165,17 @@ a.badge:hover {
   vertical-align: text-bottom;
   width: 80px !important;
 }
+.post blockquote {
+  border-color: white;
+  margin: 0 20px 20px 20px;
+  padding: 0 15px 0 15px;
+}
+.post blockquote p {
+  font-style: italic;
+  font-size: 14px;
+  font-family: serif;
+  color: white;
+}
 #footer #copyright {
   font-size: 10px;
 }
