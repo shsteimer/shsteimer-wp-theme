@@ -12,8 +12,8 @@
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
     <div class="navbar navbar-inverse">
         <div class="navbar-inner">
-            <a class="brand" href="<?php echo home_url( '/' ); ?>">Home</a>
             <ul class="nav">
+                <li><a class="brand" href="<?php echo home_url( '/' ); ?>">Home</a></li>
                 <?php wp_list_pages('sort_column=menu_order&depth=1&title_li='); ?>
                 <li>
                     <form class="navbar-search form-search" method="get" action="<?php echo home_url( '/' ); ?>">
